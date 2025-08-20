@@ -14,7 +14,7 @@ lang: ''
 1. 此处仅讨论 Fiddler Classic，即使 Fiddler Everywhere 也可能出现类似问题。
 
 2. 本人的 Fiddler 并非官方渠道，且安装了其他的插件，问题也是出现与此。理论上来讲，完全卸载后，换个文件夹安装 [官方 Fiddler](https://www.telerik.com/download/fiddler) 也可以解决这个问题。
-  
+
 
 # 背景
 
@@ -40,8 +40,7 @@ A SSLv3-compatible ServerHello handshake was found. Fiddler extracted the parame
 
 这种情况只需要去 `Tools > Options > HTTPS` 里修改 `Protocols`，在后面加上 `;tls1.2` 就可以
 
-<img src='http://i0.hdslb.com/bfs/new_dyn/12a4dc2c67eef03314c42461140854781754348361.png' alt="Fiddler HTTPS Protocols Setting" referrerpolicy='no-referrer' />
-
+![Fiddler HTTPS Protocols Setting](http://i0.hdslb.com/bfs/new_dyn/12a4dc2c67eef03314c42461140854781754348361.png@.webp)
 
 ## 不可名状的手残
 
@@ -49,7 +48,7 @@ A SSLv3-compatible ServerHello handshake was found. Fiddler extracted the parame
 
 如果你在 `Tools > Options > HTTPS` 中看到的是 **<font color="blue">Perform decryption</font> for the following hosts** 的字样，就说明，此时你的 Fiddler 是白名单机制，只会对下面那个框框里的域名进行 HTTPS 解析，那你点击一下这个蓝色的字，让它变成 **<font color="blue">Skip decryption</font>** 就好了。
 
-<img src='http://i0.hdslb.com/bfs/new_dyn/4a70e252569d260973235c8ec467cf781754348361.png' alt="Fiddler Decryption Mode Setting" referrerpolicy='no-referrer' />
+![Fiddler Decryption Mode Setting](http://i0.hdslb.com/bfs/new_dyn/4a70e252569d260973235c8ec467cf781754348361.png@.webp)
 
 ## 疑似证书插件过期
 
@@ -57,7 +56,7 @@ A SSLv3-compatible ServerHello handshake was found. Fiddler extracted the parame
 
 总之，把这两个文件从根目录删掉就可以，然后打开 Fiddler，在 `Tools > Options > HTTPS` 中修改证书生成即可（其实大概你删掉这两个文件之后，Fiddler 就会自动修改）。
 
-<img src='http://i0.hdslb.com/bfs/new_dyn/6f72fbffdaa62abcf6b067a270c272821754348361.png' alt="Fiddler CertMaker Settings" referrerpolicy='no-referrer' />
+![Fiddler CertMaker Settings](http://i0.hdslb.com/bfs/new_dyn/6f72fbffdaa62abcf6b067a270c272821754348361.png@.webp)
 
 # 最后
 

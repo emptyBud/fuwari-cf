@@ -534,6 +534,8 @@ function createPhotoSwipe() {
 			itemData.h = Number(element.naturalHeight || window.innerHeight)
 
 			itemData.msrc = element.src
+            // 添加 referrerpolicy 属性
+		    itemData.referrerpolicy = "no-referrer";
 		}
 
 		return itemData
